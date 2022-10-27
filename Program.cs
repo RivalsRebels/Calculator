@@ -39,10 +39,8 @@
                 if (Operator != null)
                 {
                     throw new FormatException();
-
                 }
             }
-
             catch (DivideByZeroException e)
             {
                 Console.WriteLine(e.Message);
@@ -61,7 +59,6 @@
             {
                 Console.WriteLine(e.Message);
             }
-            
         }
     }
 }
