@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace MainCal
 {
@@ -7,29 +8,53 @@ namespace MainCal
 
         static void Main(String[] args)
         {
-            Console.Write("Press the First Number: ");
-            double Number1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Press the Sign: ");
-            string op = Console.ReadLine();
-            Console.Write("Press the Second Number: ");
-            double Number2 = Convert.ToDouble(Console.ReadLine());
+            try
+            {
+                Console.Write("Press the First Number: ");
+                double Number1 = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Press the Sign: ");
+                string Operator = Console.ReadLine();
+                Console.Write("Press the Second Number: ");
+                double Number2 = Convert.ToDouble(Console.ReadLine());
 
-            if (op == "+")
-            {
-                Console.WriteLine( Number1 + Number2 );
+                if (Operator == "+")
+                {
+                    Console.WriteLine(Number1 + Number2);
+                }
+                else if (Operator == "-")
+                {
+                    Console.WriteLine(Number1 - Number2);
+                }
+                else if (Operator == "*")
+                {
+                    Console.WriteLine(Number1 * Number2);
+                }
+                else if (Operator == "/")
+                {
+                    Console.WriteLine(Number1 / Number2);
+                }
+
+                if (Operator != null )
+                {
+                    throw new FormatException();
+                }
             }
-            else if(op == "-")
+
+
+            catch (DivideByZeroException e)
             {
-                Console.WriteLine( Number1 - Number2);
+                Console.WriteLine(e.Message);
             }
-            else if (op == "*")
+            catch (ArgumentOutOfRangeException e)
             {
-                Console.WriteLine(Number1 * Number2);
+                Console.WriteLine(e.Message);
             }
-            else if (op == "/")
+            catch (ArithmeticException e)
             {
-                Console.WriteLine(Number1 / Number2);
+                Console.WriteLine(e.Message);
             }
+            
+
 
 
 
