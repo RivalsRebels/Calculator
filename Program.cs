@@ -35,11 +35,6 @@
                 {
                     Console.WriteLine(Number1 / Number2);
                 }
-
-                if (Operator != null)
-                {
-                    throw new FormatException();
-                }
             }
             catch (DivideByZeroException e)
             {
