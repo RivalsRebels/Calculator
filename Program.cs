@@ -26,6 +26,10 @@ namespace MainCal
             {
                 Console.WriteLine(Number1 * Number2);
             }
+            else if (op == "/")
+            {
+                Console.WriteLine(Number1 / Number2);
+            }
 
 
 
