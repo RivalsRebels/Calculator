@@ -7,13 +7,13 @@
         {
             try
             {
-                Console.Write("Press the First Number: ");
+                Console.Write("Select the First Number: ");
                 double Number1 = Convert.ToDouble(Console.ReadLine());
 
-                Console.Write("Press the Sign: ");
+                Console.Write("Select the Operator(+,-,*,/): ");
                 string Operator = Console.ReadLine();
 
-                Console.Write("Press the Second Number: ");
+                Console.Write("Select the Second Number: ");
                 double Number2 = Convert.ToDouble(Console.ReadLine());
 
                 if (Operator == "+")
